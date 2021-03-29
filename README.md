@@ -7,11 +7,11 @@ Is the file a sas v5 transport, cport or is the transport file corrupted
 
     Notes:
       1. It is now possible to convert a v5 sas transport file into R dataframes,
-         sas datasets or panda dataframes without a sas license using Python or or R.
+         sas datasets or panda dataframes without a sas license using Python and/or R.
       2. SAS V5 transport files can be opened in the SAS universal viewer. ( used to be able to save as csvs)
-         I may have a download of the original SAS universal viewer that supports conversion to csv.
+         I may have a download of the original SAS universal viewer that supports conversion of v5 transports to csv.
       3. Python pyreadstat seems to have issues importing v5 transport files. But we can create a SAS dataset or
-         an RDA or RDS R file and then read the files or sas datasets into python.
+         an RDA or RDS R file using Rand then convert the files or sas datasets into python panda dataframes.
     You will need to change the paths in some of the code below.
       Look for d:/xpt
 
@@ -86,14 +86,15 @@ Is the file a sas v5 transport, cport or is the transport file corrupted
                                                                   |_|
     ;
     * If you cannot create the sas transport datasets using the sas
-      code above you can use the R code below to download and decode code;
+      code above you can use the R code below to download and decode code.
     * Note GitHub does not support binary downloads
-      so I have created a base64 encoded version on the binary v5 transport file;
+      so I have created a base64 encoded version on the binary v5 transport file.
     * The encoded version at https://tinyurl.com/2cpwhja6 can be decoded into
       the binary v5 transport file sasxpt.xpt;
 
-    * binary download of the v5 transport file;
+    * binary download of the v5 transport file R code;
     %utl_submit_r64('
+    
     # remove output xpt file if it exists;
     url<-"https://tinyurl.com/2cpwhja6";
     xpt="d:/xpt/sasxpt.xpt";
@@ -103,6 +104,7 @@ Is the file a sas v5 transport, cport or is the transport file corrupted
     download.file(url, tmp);
     # decode the encoded file back to sas v5 binary transport file;
     base64::decode(tmp, xpt);
+    
     ');
 
     *                    _     _                    _

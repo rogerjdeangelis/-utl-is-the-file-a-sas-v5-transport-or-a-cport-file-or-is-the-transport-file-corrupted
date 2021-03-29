@@ -1,7 +1,7 @@
 # utl-is-the-file-a-sas-v5-transport-cport-or-is-the-tranport-file-corrupted
 Is the file a sas v5 transport, cport or is the transport file corrupted
 
-    Is the file a sas vr transport, cport or is the tranport file corrupted.
+    Is the file a sas v5 transport, cport or is the tranport file corrupted.
 
     I will focus on analysis of sas transort file without sas;
 

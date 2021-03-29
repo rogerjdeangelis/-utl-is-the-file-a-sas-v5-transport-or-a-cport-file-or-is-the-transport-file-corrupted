@@ -1,4 +1,4 @@
-# utl-is-the-file-a-sas-v5-transport-cport-or-is-the-tranport-file-corrupted
+# utl-is-the-file-a-sas-v5-transport-or-a-cport-file-or-is-the-transport-file-corrupted
 Is the file a sas v5 transport, cport or is the transport file corrupted
 
     Is the file a sas v5 transport, cport or is the tranport file corrupted.
